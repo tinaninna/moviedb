@@ -1,0 +1,101 @@
+.container {
+  padding: 30px 2%;
+  background-color: black;
+  width: 100%;
+}
+
+.title {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  padding-left: 50px;
+}
+
+.carouselWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  padding: 0 10px;
+}
+
+.moviesContainer {
+  flex: 1;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.moviesTrack {
+  display: flex;
+  gap: 10px;
+  width: fit-content;
+}
+
+.movieSlide {
+  min-width: 240px;
+  flex-shrink: 0;
+}
+
+.navButton {
+  background-color: rgba(0, 0, 0, 0.7);
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.navButton:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+.navButton:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.prev {
+  order: -1;
+}
+
+.next {
+  order: 1;
+}
+
+@media (max-width: 1200px) {
+  .title {
+    padding-left: 20px;
+  }
+
+  .carouselWrapper {
+    padding: 0 5px;
+  }
+
+  .movieSlide {
+    min-width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carouselWrapper {
+    gap: 5px;
+  }
+
+  .movieSlide {
+    min-width: 150px;
+  }
+
+  .navButton {
+    width: 36px;
+    height: 36px;
+  }
+}

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import logo from "../../assets/image/logo.png";
-import { Link } from "react-router-dom";
-import { Search, Bell, User, ChevronDown } from "lucide-react";
+import { AiOutlineSearch, AiOutlineBell, AiOutlineUser } from "react-icons/ai";
+import { MdOutlineExpandMore } from "react-icons/md";
 import styles from "./Header.module.css";
 
 function Header() {
@@ -31,24 +31,24 @@ function Header() {
 
         {/* navigation links */}
         <nav className={styles.nav}>
-          <Link className={styles.navLink} to="/">
+          <a className={styles.navLink} href="#/">
             Home
-          </Link>
-          <Link className={styles.navLink} to="/tv-shows">
+          </a>
+          <a className={styles.navLink} href="#/tv-shows">
             Tv Shows
-          </Link>
-          <Link className={styles.navLink} to="/movies">
+          </a>
+          <a className={styles.navLink} href="#/movies">
             Movies
-          </Link>
-          <Link className={styles.navLink} to="/new-popular">
+          </a>
+          <a className={styles.navLink} href="#/new-popular">
             New & Popular
-          </Link>
-          <Link className={styles.navLink} to="/my-list">
+          </a>
+          <a className={styles.navLink} href="#/my-list">
             My List
-          </Link>
-          <Link className={styles.navLink} to="/browse-language">
+          </a>
+          <a className={styles.navLink} href="#/browse-language">
             Browse by Language
-          </Link>
+          </a>
         </nav>
 
         {/* right side section */}
@@ -59,7 +59,7 @@ function Header() {
               onClick={() => setIsSearchOpen(!isSearchOpen)}
               className={styles.searchButton}
             >
-              <Search size={20} />
+              <AiOutlineSearch size={20} />
             </button>
 
             {isSearchOpen && (
@@ -73,7 +73,7 @@ function Header() {
 
           {/* notifications */}
           <button className={styles.iconButton}>
-            <Bell size={20} />
+            <AiOutlineBell size={20} />
             <span className={styles.notificationBadge}>4</span>
           </button>
 
@@ -85,16 +85,20 @@ function Header() {
             >
               {/* user icon */}
               <div className={styles.profileAvatar}>
-                <User size={20} />
+                <AiOutlineUser size={20} />
               </div>
               {/* dropdown icon */}
-              <ChevronDown size={20} />
+              <MdOutlineExpandMore size={20} />
             </button>
 
             {isProfileOpen && (
               <div className={styles.profileMenu}>
-                <Link className={styles.profileMenuItem}>Account</Link>
-                <Link className={styles.profileMenuItem}>help Center</Link>
+                <a className={styles.profileMenuItem} href="#/">
+                  Account
+                </a>
+                <a className={styles.profileMenuItem} href="#/">
+                  help Center
+                </a>
                 <hr className={styles.profileMenuDivider} />
                 <button className={styles.profileMenuItem}>Sign Out</button>
               </div>

@@ -1,5 +1,6 @@
 import NetflixBannerLogo from "../../assets/image/logo.png";
-import { Play, Info } from "lucide-react";
+import { AiFillPlayCircle } from "react-icons/ai";
+import { AiOutlineInfoCircle } from "react-icons/ai";
 import styles from "./Banner.module.css";
 import { useEffect, useState } from "react";
 import { movieInstance } from "../../Utility/MovieInstance";
@@ -53,11 +54,11 @@ function Banner() {
         {/* buttons */}
         <div className={styles.buttonContainer}>
           <button className={styles.button}>
-            <Play size={30} />
+            <AiFillPlayCircle size={30} />
             Play
           </button>
           <button className={styles.button}>
-            <Info size={30} />
+            <AiOutlineInfoCircle size={30} />
             My List
           </button>
         </div>

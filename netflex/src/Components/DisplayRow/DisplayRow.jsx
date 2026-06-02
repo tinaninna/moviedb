@@ -1,7 +1,6 @@
 // import React from 'react'
 import styles from "./DisplayRow.module.css";
-import SlideShow from "../SlideShow/SlideShow";
-import { movies } from "../../Data/Data";
+import Carousel from "../Carousel/Carousel";
 import { movieInstance } from "../../Utility/MovieInstance";
 import requests from "../../Utility/requestUrls";
 import { useEffect, useState } from "react";
@@ -60,10 +59,10 @@ function DisplayRow() {
   };
   return (
     <div className={styles.mainWrapper}>
-      <SlideShow title="Netflix trending" movies={movies.trending} />
-      <SlideShow title="Popular on Netflix" movies={movies.netflixOriginals} />
-      <SlideShow title="Action" movies={movies.action} />
-      <SlideShow title="Top Rated" movies={movies.topRated} />
+      <Carousel title="Netflix trending" movies={movies.trending} />
+      <Carousel title="Popular on Netflix" movies={movies.netflixOriginals} />
+      <Carousel title="Action" movies={movies.action} />
+      <Carousel title="Top Rated" movies={movies.topRated} />
     </div>
   );
 }
