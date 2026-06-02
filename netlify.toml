@@ -1,0 +1,4 @@
+[build]
+  base    = "netflex"
+  command = "npm ci && npm run build"
+  publish = "dist"
